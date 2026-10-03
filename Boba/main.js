@@ -67,4 +67,30 @@ function animate() {
     renderer.render(scene, camera);
 }
 
+function star(){
+    const size = Math.random() * 0.08 + 0.02;
+
+    const geometry = new THREE.SphereGeometry(size, 8, 8)
+    
+        const material = new THREE.MeshStandardMaterial({
+        color: 0xffffff,
+        emissive: 0xffffff,
+        emissiveIntensity: Math.random() * 4 + 2
+        })
+    
+    const mesh = new THREE.Mesh(geometry, material);
+
+    mesh.position.set(
+        (Math.random() - 0.5) * 100,
+        (Math.random() - 0.5) * 100,
+        (Math.random() - 0.5) * 100
+    );
+
+    scene.add(mesh);
+};
+
+for (let i = 0; i < 500; i++) {
+    star();
+}
+
 animate();
