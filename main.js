@@ -35,10 +35,6 @@ const light = new THREE.DirectionalLight(0xffffff, 3);
 light.position.set(5, 5, 5);
 scene.add(light);
 
-const grid = new THREE.GridHelper(20, 20);
-scene.add(grid);
-
-
 
 const modelLoader = new GLTFLoader();
 
