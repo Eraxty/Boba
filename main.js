@@ -14,7 +14,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 camera.position.set(0, 2, 5);
 
-const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 controls.enableDamping = true;
 controls.enablePan = false;
@@ -35,7 +35,7 @@ scene.add(grid);
 
 
 
-const modelLoader = new GLTFLoader();
+const modelLoader = new THREE.GLTFLoader();
 
 modelLoader.load(
     './car.glb',
