@@ -1,8 +1,6 @@
-import './src/style.css'
-
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import * as THREE from 'https://unpkg.com/three@0.186.1/build/three.module.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.186.1/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.186.1/examples/jsm/controls/OrbitControls.js';
 
 const scene = new THREE.Scene();
 
@@ -44,7 +42,7 @@ scene.add(grid);
 const modelLoader = new GLTFLoader();
 
 modelLoader.load(
-    `${import.meta.env.BASE_URL}car.glb`,
+    './public/car.glb',
     (gltf) => {
         const car = gltf.scene;
 
