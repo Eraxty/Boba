@@ -66,3 +66,7 @@ section {
 .last h2 {
     font-size: 100px;
 }
+
+.last a {
+    color: white;
+}

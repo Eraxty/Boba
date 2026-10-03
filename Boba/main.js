@@ -35,8 +35,6 @@ scene.add(light);
 const grid = new THREE.GridHelper(20, 20);
 scene.add(grid);
 
-const lightHelper = new THREE.DirectionalLightHelper(light, 2);
-scene.add(lightHelper);
 
 
 const modelLoader = new GLTFLoader();
@@ -79,12 +77,15 @@ function star(){
         })
     
     const mesh = new THREE.Mesh(geometry, material);
+    const angle = Math.random() * Math.PI * 2;
+    const radius = 30 + Math.random() * 70;
 
     mesh.position.set(
+        Math.cos(angle) * radius,
         (Math.random() - 0.5) * 100,
-        (Math.random() - 0.5) * 100,
-        (Math.random() - 0.5) * 100
+        Math.sin(angle) * radius
     );
+
 
     scene.add(mesh);
 };
