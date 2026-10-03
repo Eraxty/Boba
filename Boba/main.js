@@ -23,7 +23,11 @@ camera.position.set(0, 2, 5);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 controls.enableDamping = true;
-controls.dampingFactor = 0.05;
+controls.enablePan = false;
+controls.enableZoom = false;
+
+controls.minPolarAngle = controls.getPolarAngle();
+controls.maxPolarAngle = controls.getPolarAngle();
 
 const ambient = new THREE.AmbientLight(0xffffff, 2);
 scene.add(ambient);

@@ -13,7 +13,24 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
+}
+
+.controls-hint {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-top: 24px;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+main a,
+main button {
+    pointer-events: auto;
 }
 
 section {
