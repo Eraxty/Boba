@@ -1,3 +1,8 @@
+import './src/style.css';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
@@ -14,7 +19,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 camera.position.set(0, 2, 5);
 
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 
 controls.enableDamping = true;
 controls.enablePan = false;
@@ -35,10 +40,10 @@ scene.add(grid);
 
 
 
-const modelLoader = new THREE.GLTFLoader();
+const modelLoader = new GLTFLoader();
 
 modelLoader.load(
-    './car.glb',
+    `${import.meta.env.BASE_URL}car.glb`,
     (gltf) => {
         const car = gltf.scene;
 
