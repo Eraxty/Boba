@@ -42,7 +42,7 @@ scene.add(grid);
 const modelLoader = new GLTFLoader();
 
 modelLoader.load(
-    './public/car.glb',
+    './car.glb',
     (gltf) => {
         const car = gltf.scene;
 
@@ -80,7 +80,7 @@ function star(){
     
     const mesh = new THREE.Mesh(geometry, material);
     const angle = Math.random() * Math.PI * 2;
-    const radius = 30 + Math.random() * 70;
+    const radius = 8 + Math.random() * 20;
 
     mesh.position.set(
         Math.cos(angle) * radius,
