@@ -44,7 +44,7 @@ scene.add(grid);
 const modelLoader = new GLTFLoader();
 
 modelLoader.load(
-    '/car.glb',
+    `${import.meta.env.BASE_URL}car.glb`,
     (gltf) => {
         const car = gltf.scene;
 
