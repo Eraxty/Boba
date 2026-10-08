@@ -4,7 +4,7 @@
 }
 
 body {
-    background: black;
+    background: #071a3d url("image.png") center / cover fixed no-repeat;
     color: white;
     font-family: Arial;
 }
